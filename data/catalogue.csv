@@ -1,0 +1,19 @@
+id,name_en,name_he,category,allergens,kashrut,non_kosher,is_meat_or_fish,is_animal_product,kcal_100g,protein_100g,carbs_100g,fat_100g,package_size,package_unit,pantry_staple,code_shufersal,code_rami_levy,code_osher_ad,is_test_data
+pasta,Pasta,פסטה,grains,gluten,pareve,false,false,false,350,12,71,1.5,500,g,false,,,,true
+rice,White rice,אורז לבן,grains,,pareve,false,false,false,130,2.7,28,0.3,1000,g,false,,,,true
+oats,Oats,שיבולת שועל,grains,gluten,pareve,false,false,false,380,13,67,7,500,g,false,,,,true
+bread,Sliced bread,לחם פרוס,grains,gluten,pareve,false,false,false,250,9,49,3,750,g,false,,,,true
+chicken_breast,Chicken breast,חזה עוף,meat,,meat,false,true,true,165,31,0,3.6,1000,g,false,,,,true
+eggs,Eggs,ביצים,dairy_eggs,eggs,pareve,false,false,true,143,13,1,10,12,unit,false,,,,true
+cottage,Cottage cheese,גבינת קוטג',dairy_eggs,dairy,dairy,false,false,true,98,11,3.4,4.3,250,g,false,,,,true
+milk,Milk,חלב,dairy_eggs,dairy,dairy,false,false,true,60,3.2,4.8,3,1000,ml,false,,,,true
+tuna_can,Canned tuna,טונה בקופסה,canned,,pareve,false,true,true,116,26,0,1,160,g,false,,,,true
+chickpeas_can,Canned chickpeas,חומוס שימורים,canned,,pareve,false,false,false,139,7,23,2.6,400,g,false,,,,true
+tofu,Tofu,טופו,protein,soy,pareve,false,false,false,76,8,1.9,4.8,300,g,false,,,,true
+tomato,Tomato,עגבנייה,vegetables,,pareve,false,false,false,18,0.9,3.9,0.2,1000,g,false,,,,true
+cucumber,Cucumber,מלפפון,vegetables,,pareve,false,false,false,15,0.7,3.6,0.1,1000,g,false,,,,true
+onion,Onion,בצל,vegetables,,pareve,false,false,false,40,1.1,9.3,0.1,1000,g,false,,,,true
+tahini,Tahini,טחינה,spreads,,pareve,false,false,false,595,17,21,54,500,g,false,,,,true
+peanut_butter,Peanut butter,חמאת בוטנים,spreads,nuts,pareve,false,false,false,588,25,20,50,340,g,false,,,,true
+olive_oil,Olive oil,שמן זית,pantry,,pareve,false,false,false,884,0,0,100,750,ml,true,,,,true
+salt,Salt,מלח,pantry,,pareve,false,false,false,0,0,0,0,1000,g,true,,,,true
