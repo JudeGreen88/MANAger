@@ -8,7 +8,7 @@
 
 2.  **User and pain defined.** Our user is a student in Jerusalem. Their pain is overspending on food ordered in and on unplanned groceries, not knowing what to cook, inefficient planning, and lack of time and energy. This is based on our own experience as students and will be validated through user interviews and the onboarding questionnaire.
 
-3.  **User stories and full flow.** We added 18 user stories (11 in V1 core, 6 in V1.1, 1 for later) and a flow diagram covering sign-in, questionnaire, weekly planning, AI menu and prices, budget check, results, and the shopping list checked off in the store.
+3.  **User stories and full flow.** We added 22 user stories (11 in V1 core, 10 in V1.1, 1 for later) and a flow diagram covering sign-in, questionnaire, weekly planning, AI menu and prices, budget check, results, and the shopping list checked off in the store.
 
 4.  **Success metrics.** Two primary metrics: savings per basket (cheapest chain vs. the average of the three chains) and week-2 retention (share of testers who generate a second weekly plan), plus five supporting metrics. All targets are first estimates, to be revised after the first tests with classmates and friends and again after the first 10 pilot users.
 
@@ -102,7 +102,7 @@ Stories marked V1 core are built this semester; V1.1 follows once V1 core passes
 | US17   | student                    | use the app in Hebrew                                                                                                                          | I can use it in my own language                                   | V1.1         |
 | US18   | student                    | mark items I already have at home                                                                                                              | they are removed from the list                                    | Later        |
 | US19   | student living with roommates | create a household and invite my roommates with a code, each with their own account and profile                                              | we plan together without sharing one login                        | V1.1         |
-| US20   | household member           | mark each meal as together or just me, and choose who takes part                                                                               | the plan matches how we actually eat                              | V1.1         |
+| US20   | household member           | mark each meal as together or just me, and choose who takes part and each person's portion size (small / regular / large)                                                                               | the plan matches how we actually eat                              | V1.1         |
 | US21   | household member           | see one combined shopping list rounded to packages, with each person's share of the cost                                                       | we buy each package once and split the bill fairly                | V1.1         |
 | US22   | household member           | see how much the household saves compared with each of us shopping alone                                                                       | I know the benefit of planning together                           | V1.1         |
 
@@ -189,6 +189,8 @@ The MVP is split in two: V1 core is what we must deliver this semester, and V1.1
 
 - Interface in English.
 
+- "How many people do you cook for": in V1 core this number only multiplies the quantities for the one profile. Separate profiles, diets and budgets for roommates come with the V1.1 household feature.
+
 ## V1.1
 
 - Downloading the shopping list (US12).
@@ -253,6 +255,8 @@ The first two metrics are primary; the other five support them.
 | Plan acceptance                | Share of planned meals kept without a swap                                                                                       | Event log                  | ≥ 70%                               |
 | Data quality                   | Share of list items matched to a real product with a price                                                                       | Automated check            | 100% in the catalogue, ≥ 95% priced |
 | Satisfaction                   | "Would you recommend MANAger to a friend?" (0–10)                                                                                | In-app survey after week 1 | NPS ≥ 30                            |
+
+For the V1.1 household feature we add two metrics: **household saving** (the same plan bought separately by each member vs the pooled basket, shown separately from the chain saving) and **household week-2 return** (share of households that build a second weekly plan). Targets to be set after the first household tests.
 
 Targets are first estimates; we will revise them after the first tests with classmates and friends, and again after the first 10 pilot users. The 10% saving target in particular may need adjusting, since it is measured against the three-chain average rather than the most expensive chain.
 
@@ -336,7 +340,7 @@ All decisions left open on October 25 are now settled.
 | "Now" suggestion                 | V1.1, based on the clock and stated meal times                                                             |
 | Promotions, seasons and holidays | V1.1                                                                                                       |
 | Savings baseline                 | Average of the three chains                                                                                |
-| Roommates household              | V1.1. Meals marked together or solo; shared meals use the strictest common filter, calculated in code; members join with an invite code and their own accounts |
+| Roommates household              | V1.1. Meals marked together or solo; shared meals use the strictest common filter, calculated in code; each participant picks a portion size; the owner builds and locks the plan; only the household total ceiling binds; the leftover part of a package is split by use; members join with an expiring invite code, owner approval and their own accounts |
 
 **Still open:** the cost per weekly plan (to estimate after 50 generations), the nutrition data source (to verify), and testing the open-source price-file library.
 

@@ -52,6 +52,15 @@ Python, Streamlit, Claude API, Auth0 login, shared GitHub repo. No separate Fast
 4. AI plan generation restricted to the catalogue, plus single-meal swap.
 5. Streamlit UI: Auth0, questionnaire, location, plan, ranking, shopping list, check-off.
 6. Hardening and deploy: criteria tests, public URL, phone check.
+7. (V1.1, only after steps 1-6 and all seven criteria pass) Roommates household, see `docs/roommates_household.md`. Depends on step 3 (profile and filters) and step 5 (Auth0, UI), and on a chosen shared database.
+
+## V1.1 completion criteria: roommates household
+H1. A shared meal passes the strictest common filter: an automated test over allergen, vegetarian/vegan and kashrut combinations (extends criterion 6).
+H2. The pooled shopping list buys no more packages than the sum of each member's separate list.
+H3. Members' cost shares sum exactly to the basket total, including the unused part of a package.
+H4. A household of one gives the same result as the single-user flow.
+H5. The shared database is chosen and documented before building starts.
+H6. Invite code expiry, owner approval, member removal and the consent text work and are tested.
 
 ## Decision log
 | Topic | Decision |
@@ -66,7 +75,7 @@ Python, Streamlit, Claude API, Auth0 login, shared GitHub repo. No separate Fast
 | Kashrut | Recipe-level rule |
 | Savings baseline | Average of the three chains |
 | UI design | Stitch prototype in `design/` (reference only, mock data labelled "Test data"); app stays Streamlit |
-| Roommates household | V1.1, design in `docs/roommates_household.md`. Meals `together`/`solo`; shared meals use the strictest common allergen/diet/kashrut filter in code; join by invite code with own Auth0 accounts |
+| Roommates household | V1.1, design in `docs/roommates_household.md`. Meals `together`/`solo` with portion size; strictest common allergen/diet/kashrut filter in code; owner builds and locks the plan; only the household total ceiling binds; leftover package split by use; join by expiring invite code with owner approval and own Auth0 accounts; V1 core "people" only multiplies quantities |
 
 **Open**: cost per weekly plan (estimate after 50 generations); nutrition data source; testing the open-source price-file library.
 
