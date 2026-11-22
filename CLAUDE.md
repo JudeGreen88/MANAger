@@ -48,6 +48,7 @@ Python, Streamlit, Claude API, Auth0 login, shared GitHub repo. No separate Fast
 ## Build order (PROPOSED; the spec mentions six phases but does not list them, team to confirm)
 1. Ingredient catalogue and tags (allergens, meat/dairy/pareve, nutrition per 100 g, package sizes).
 2. Price-file pipeline and chain ranking (test the open-source price-file library first).
+   2a. Risk-first spike before step 3: price a 15-20 item sample basket from real branch files of the three chains; report coverage, file date and the spread between chains in `docs/price_spike.md`.
 3. Profile and calculation engine (calorie/protein targets, budget ceiling, filters) with tests.
 4. AI plan generation restricted to the catalogue, plus single-meal swap.
 5. Streamlit UI: Auth0, questionnaire, location, plan, ranking, shopping list, check-off.
@@ -80,4 +81,4 @@ H6. Invite code expiry, owner approval, member removal and the consent text work
 **Open**: cost per weekly plan (estimate after 50 generations); nutrition data source; testing the open-source price-file library.
 
 ## Team and conventions
-Roles: price data; catalogue and AI prompt; interface and integration. Keep commits small, add a decision-log line whenever a decision changes. Test command: _to add once the repo is set up_.
+Roles: price data; catalogue and AI prompt; interface and integration. Keep commits small, add a decision-log line whenever a decision changes. Test command: `python -m pytest -q` (activate `.venv` first).
