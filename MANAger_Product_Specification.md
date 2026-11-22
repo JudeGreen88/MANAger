@@ -101,6 +101,10 @@ Stories marked V1 core are built this semester; V1.1 follows once V1 core passes
 | US16   | student                    | be offered options when I go over budget: keep the plan, switch to cheaper brands, or replace the 1–2 most expensive dishes                    | I can stay within budget without starting over                    | V1.1         |
 | US17   | student                    | use the app in Hebrew                                                                                                                          | I can use it in my own language                                   | V1.1         |
 | US18   | student                    | mark items I already have at home                                                                                                              | they are removed from the list                                    | Later        |
+| US19   | student living with roommates | create a household and invite my roommates with a code, each with their own account and profile                                              | we plan together without sharing one login                        | V1.1         |
+| US20   | household member           | mark each meal as together or just me, and choose who takes part                                                                               | the plan matches how we actually eat                              | V1.1         |
+| US21   | household member           | see one combined shopping list rounded to packages, with each person's share of the cost                                                       | we buy each package once and split the bill fairly                | V1.1         |
+| US22   | household member           | see how much the household saves compared with each of us shopping alone                                                                       | I know the benefit of planning together                           | V1.1         |
 
 # 5. User flow
 
@@ -201,6 +205,8 @@ The MVP is split in two: V1 core is what we must deliver this semester, and V1.1
 
 - Promotions, seasons and holidays reflected in the plan.
 
+- Roommates household: flatmates join one household, mark each meal together or solo, and get one combined shopping list with a cost split (US19-US22). Design: `docs/roommates_household.md`.
+
 ## Onboarding questionnaire
 
 The questionnaire is the first thing a user completes after signing in. It also serves as a research tool to validate our assumptions about students.
@@ -277,6 +283,7 @@ The project is feasible because Israeli law requires supermarket chains to publi
 | Nutrition data source                                              | Inaccurate calories and protein                | Nutritional values per 100 g for each catalogue ingredient, from one official source (candidate: the Israeli Ministry of Health nutrition database, to verify); values shown as estimates |
 | Sensitivities, allergies and kashrut                               | Health or religious harm to the user           | Allergen and meat/dairy/pareve tagging in the catalogue, human-validated; filtering done in code, not by the AI; a clear notice to check the product label at the branch                  |
 | Package sizes vs. recipe quantities                                | List under- or over-buys                       | Round up to the nearest package in code; ingredient reuse across recipes                                                                                                                  |
+| Roommates household (V1.1): strictest filter leaves few recipes; no shared storage in Streamlit | Few shared meals; households cannot be saved | Offer "just me" for the meal; choose a small shared database after V1 core (see `docs/roommates_household.md`) |
 | Beginner team, one semester                                        | Unfinished app                                 | Six-phase build order in CLAUDE.md; nothing outside V1 core before the completion criteria pass                                                                                           |
 
 **Team roles:** price data · catalogue and AI prompt · interface and integration.
@@ -329,6 +336,7 @@ All decisions left open on October 25 are now settled.
 | "Now" suggestion                 | V1.1, based on the clock and stated meal times                                                             |
 | Promotions, seasons and holidays | V1.1                                                                                                       |
 | Savings baseline                 | Average of the three chains                                                                                |
+| Roommates household              | V1.1. Meals marked together or solo; shared meals use the strictest common filter, calculated in code; members join with an invite code and their own accounts |
 
 **Still open:** the cost per weekly plan (to estimate after 50 generations), the nutrition data source (to verify), and testing the open-source price-file library.
 

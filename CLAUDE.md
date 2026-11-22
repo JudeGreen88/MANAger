@@ -20,7 +20,7 @@ Python, Streamlit, Claude API, Auth0 login, shared GitHub repo. No separate Fast
 - One combined shopping list for the chosen chain, rounded up to package sizes, no pantry staples (oil, salt, sugar, spices), price per item and total (US10)
 - Check-off list for use in the store (US11)
 
-**V1.1** (only after all completion criteria pass): list download, meal history, "now" suggestion, private-label vs. brands, over-budget options (keep / cheaper brands / replace 1-2 dishes), Hebrew RTL, promotions/seasons/holidays.
+**V1.1** (only after all completion criteria pass): list download, meal history, "now" suggestion, private-label vs. brands, over-budget options (keep / cheaper brands / replace 1-2 dishes), Hebrew RTL, promotions/seasons/holidays, roommates household.
 
 **Later / out of scope**: pantry items at home; other plan durations; other cities or chains; families/non-students; splitting a basket across chains; separate backend; delivery or pick-up; medical advice.
 
@@ -66,6 +66,7 @@ Python, Streamlit, Claude API, Auth0 login, shared GitHub repo. No separate Fast
 | Kashrut | Recipe-level rule |
 | Savings baseline | Average of the three chains |
 | UI design | Stitch prototype in `design/` (reference only, mock data labelled "Test data"); app stays Streamlit |
+| Roommates household | V1.1, design in `docs/roommates_household.md`. Meals `together`/`solo`; shared meals use the strictest common allergen/diet/kashrut filter in code; join by invite code with own Auth0 accounts |
 
 **Open**: cost per weekly plan (estimate after 50 generations); nutrition data source; testing the open-source price-file library.
 
