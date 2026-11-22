@@ -65,6 +65,7 @@ Python, Streamlit, Claude API, Auth0 login, shared GitHub repo. No separate Fast
 | Missing prices | Excluded everywhere, marked "price unknown" |
 | Kashrut | Recipe-level rule |
 | Savings baseline | Average of the three chains |
+| UI design | Stitch prototype in `design/` (reference only, mock data labelled "Test data"); app stays Streamlit |
 
 **Open**: cost per weekly plan (estimate after 50 generations); nutrition data source; testing the open-source price-file library.
 
